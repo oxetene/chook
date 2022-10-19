@@ -1,0 +1,4 @@
+To build chook you need the curl header files and tor (unless you remove the proxy line inside main.c).
+
+- Define the username, avatar and token you want to use for the discord webhook.
+- Run `make` to build chook (use root if necessary).
