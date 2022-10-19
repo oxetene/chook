@@ -9,9 +9,9 @@
 #define AVATAR	""
 #define TOKEN	""
 
-struct curl_slist* list = NULL;
+struct curl_slist *list = NULL;
 
-void post(CURL* curl, char *data) {
+void post(CURL *curl, char *data) {
 	curl_easy_setopt(curl, CURLOPT_URL, TOKEN);
 	curl_easy_setopt(curl, CURLOPT_PROXY, "socks5://127.0.0.1:9050");
 	curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data);
@@ -21,7 +21,7 @@ void post(CURL* curl, char *data) {
 }
 
 int main(void) {
-	CURL* curl = curl_easy_init();
+	CURL *curl = curl_easy_init();
 	list = curl_slist_append(list, "content-type: application/json");
 	char buffer[2000], *message;
 
